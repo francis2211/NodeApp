@@ -30,4 +30,8 @@ node {
             } 
                 echo "Trying to Push Docker Build to DockerHub"
     }
+    stage('Deploy'){
+
+        sh 'docker run –d –p 8084:8084 –-name furbaez/nodeapp'      
+   }
 }
